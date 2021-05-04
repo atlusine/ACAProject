@@ -1,0 +1,25 @@
+Show databases
+create database AcaDB
+Use AcaDB
+Create table Students ( PersonID int, LastName varchar(255), FirstName varchar(255), MoneyTS varchar(255), CreditCard_number int, Payment_status varchar(255) )
+show tables
+"Insert into Students (PersonID, LastName, FirstName, MoneyTS, CreditCard_number, Payment_status) 
+Value ('1', 'Doe', 'John', 'PayPal', '123456789', 'Done'),
+ ('2', 'Smith', 'Adam', 'Payoneer', '123456789', 'Not Done'), 
+('3', 'Black', 'Lily', 'Visacard', '123456789', 'Done'), 
+('4', 'White', 'Mandy', 'Mastercard', '123456789', 'Done'), 
+('5', 'Ngoe', 'Jane', 'PayPal', '123456789', 'Done'),
+ ('6', 'Evans', 'Milly', 'Payoneer', '123456789', 'Not Done'), 
+('7', 'Mirt', 'May', 'Visacard', '123456789', 'Not Done' )"
+Create table studentsmark AS Select PersonID, LastName, FirstName From students
+Alter table studentsmark ADD (Marks int, Passing_info varchar(8) )
+UPDATE Studentsmark SET Marks='2' WHERE PersonID=1
+UPDATE Studentsmark SET Marks = '6' WHERE PersonID= 3
+UPDATE Studentsmark SET Marks = '7' WHERE PersonID= 4
+UPDATE Studentsmark SET Marks = '9' WHERE PersonID= 5
+UPDATE Studentsmark SET Marks = '1' WHERE PersonID= 6
+UPDATE Studentsmark SET Marks = '8' WHERE PersonID= 7
+Insert into studentsmark (Lastname, Firstname, Marks) Values ('Wayn', 'Anny', '8' )
+UPDATE studentsmark SET Passing_info = 'Passed' WHERE Marks > 4
+Update studentsmark Set Passing_info='Failed' Where Marks<4
+Update studentsmark Set Passing_info='Passes' Where Marks=4
