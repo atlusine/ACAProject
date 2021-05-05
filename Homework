@@ -1,0 +1,14 @@
+CREATE TABLE Students
+(
+ID varchar (255),
+Firstname varchar (255),
+Lastname varchar (255),
+Amount varchar (200)
+);
+
+CREATE TABLE UserOrder (
+ID int,
+OrderNumber int
+);
+INSERT INTO Users (UserID, FirstName, LastName)
+CREATE TABLE Students_Grades AS SELECT LatName, FirstName From Payment 
