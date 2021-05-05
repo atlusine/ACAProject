@@ -1,4 +1,4 @@
-CREATE DATABASE ACA_Students;
+CREATE DATABASE ACA_Studentsl;
 
 USE ACA_Students;
 
