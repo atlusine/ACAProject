@@ -1,0 +1,20 @@
+Use ACA;
+create table Students
+(
+ID varchar (200),
+Firstname varchar (200),
+Lastname varchar (200),
+Transmitteraccount varchar (200),
+Recipientaccount varchar (200),
+Amount varchar (200)
+);
+select * from Students;
+insert into Students (ID, Firstname, Lastname, Transmitteraccount, Recipientaccount, Amount)
+values ('1','Ani', 'Margaryan', '157002', '157231', '5000'),
+('2', 'Mariam', 'Mirijanyan', '164003', '154000', '15000'),
+('3','Tatev', 'Kovalenko', '123455', '145654', '14000'),
+('4', 'Narine', 'Abgaryan', '178655', '147005', '6500'),
+('5', 'Emilia', 'Karapetyan', '654233', '897522', '2300'),
+('6', 'Mary', 'Karapetyan', '789544', '123877', '14700'),
+('7', 'Liana', 'Nazaryan', '174899', '156450', '17800');
+select * from Students;
