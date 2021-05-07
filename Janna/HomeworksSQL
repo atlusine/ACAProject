@@ -1,0 +1,15 @@
+CREATE DATABASE ACA_StudentsInfo;
+
+USE ACA_StudentsInfo;
+
+CREATE TABLE Payments
+(
+ID INT AUTO_INCREMENT PRIMARY KEY,
+LastName varchar(100),
+FirstName varchar(100),
+TransferFromAccount numeric(16),
+BeneficiaryAccount numeric(16),
+Amount INT
+);
+
+SELECT * FROM Payments;

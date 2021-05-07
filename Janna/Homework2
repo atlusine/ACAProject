@@ -1,0 +1,27 @@
+USE ACA_StudentsInfo;
+
+CREATE TABLE KnowledgeCheck(
+ID INT auto_increment PRIMARY KEY,
+LastName varchar(100),
+FirstName varchar(100),
+TestCases numeric(10),
+BugReporting numeric (10),
+MySQL numeric(10)
+);
+
+SELECT * FROM KnowledgeCheck;
+
+First way` we insert LastNames and FirstNames manually, also grades
+
+INSERT INTO KnowledgeCheck (LastName,FirstName,TestCases,BugReporting,MySQL,Average)
+VALUES 
+('Zhanna','Petrosyan',9,8,5,7.3),
+('Anna','Poxosyan',8,7,4,6.3),
+('Areg','Sargsyan',6,4,4,4.6),
+('Armine','Azaryan',7,8,4,6.3),
+('Ashot','Petrosyan',5,4,6,5),
+('Kristina','Avetisyan',6,6,6,6),
+('Lusine','Khachatryan',7,4,5,5.3),
+('Mariam','Markosyan',4,4,4,4),
+('Carmen','Vardanyan',7,5,4,5.3),
+('Liana','Nazaryan',7,5,7,6.3);
