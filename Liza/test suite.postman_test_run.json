@@ -1,0 +1,80 @@
+{
+	"id": "36b3b331-4ae2-4162-b1d9-edb8f5e91b38",
+	"name": "test suite",
+	"timestamp": "2021-05-07T16:08:42.608Z",
+	"collection_id": "7d3f164d-8630-4c88-869c-fef43878f0c1",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 2,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "60d20911-e63e-4700-a70c-44d262fb8f8f",
+			"name": "{{url_new}}users?page=2",
+			"url": "https://reqres.in/api/users?page=2",
+			"time": 78,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check if user with id7 is Michael": true
+			},
+			"testPassFailCounts": {
+				"Check if user with id7 is Michael": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				78
+			],
+			"allTests": [
+				{
+					"Check if user with id7 is Michael": true
+				}
+			]
+		},
+		{
+			"id": "f3229373-d7c2-4756-ae60-70c1c483c73d",
+			"name": "{{url_new}}users?page=2",
+			"url": "https://reqres.in/api/users?page=2",
+			"time": 26,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				26
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 104,
+	"collection": {
+		"requests": [
+			{
+				"id": "60d20911-e63e-4700-a70c-44d262fb8f8f",
+				"method": "GET"
+			},
+			{
+				"id": "f3229373-d7c2-4756-ae60-70c1c483c73d",
+				"method": "GET"
+			}
+		]
+	}
+}
