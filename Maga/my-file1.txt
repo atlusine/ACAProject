@@ -1,1 +1,53 @@
-SQL JOIN1.CREATE DATABASE SQLjoin;2.USE SQLjoin;3.CREATE TABLE Clients ( N int NOT NULL AUTO_INCREMENT,ID int NOT NULL,FirstName varchar(100),LastName varchar(100),PRIMARY KEY (N));4.INSERT INTO Clients VALUES ( N, ID= 1012, FirstName='Lilit', LastName= 'Muradyan'),( N, ID= 1225, FirstName= 'Aram', LastName= 'Grigoryan'),(N, ID= 2154, FirstName= 'Areg', LastName= 'Sargsyan'),(N, ID= 1236, FirstName= 'Armine', LastName= 'Barseghyan'),(N, ID=1328, FirstName= 'Gor', LastName= 'Gevorgyan'),(N, ID= 4547, FirstName= 'Mher', LastName= 'Davtyan'),(N, ID= 8939, FirstName='Tatev', LastName='Kirakosyan');...5. SELECT * FROM Clients;6.USE SQLjoin;7.CREATE TABLE Orders ( N int NOT NULL AUTO_INCREMENT, ID numeric NOT NULL, OrderN numeric, PRIMARY KEY (N));8.UPDATE Orders SET OrderN= '1587' WHERE N=1;...9.SELECT * FROM Orders;10.SELECT FirstNameFROM ClientsINNER JOIN OrdersON Clients.ID = Orders.ID;11.SELECT LastNameFROM ClientsLEFT JOIN OrdersON Clients.ID = Orders.ID;WHERE Clients.ID=Orders.ID;12.SELECT Orders.OrderN,Clients.LastName, Clients.FirstNameFROM ClientsRIGHT JOIN ClientsON Orders.ID = Clients.ID;13.SELECT Clients.LastName, Orders.IDFROM ClientsCROSS JOIN OrdersWHERE Clients.ID=Orders.ID;14.SELECT A.FirstName AS FirstName, B.LastName AS LastName, A.IDFROM Clients A, Clients BWHERE A.ID <> B.ID;
+
+
+SQL JOIN
+
+
+1.CREATE DATABASE SQLjoin;
+2.USE SQLjoin;
+3.CREATE TABLE Clients ( N int NOT NULL AUTO_INCREMENT,
+ID int NOT NULL,
+FirstName varchar(100),
+LastName varchar(100),
+PRIMARY KEY (N)
+);
+4.INSERT INTO Clients VALUES ( N, ID= 1012, FirstName='Lilit', LastName= 'Muradyan'),
+( N, ID= 1225, FirstName= 'Aram', LastName= 'Grigoryan'),
+(N, ID= 2154, FirstName= 'Areg', LastName= 'Sargsyan'),
+(N, ID= 1236, FirstName= 'Armine', LastName= 'Barseghyan'),
+(N, ID=1328, FirstName= 'Gor', LastName= 'Gevorgyan'),
+(N, ID= 4547, FirstName= 'Mher', LastName= 'Davtyan'),
+(N, ID= 8939, FirstName='Tatev', LastName='Kirakosyan');...
+5. SELECT * FROM Clients;
+6.USE SQLjoin;
+7.CREATE TABLE Orders ( N int NOT NULL AUTO_INCREMENT, ID numeric NOT NULL, OrderN numeric, PRIMARY KEY (N));
+8.UPDATE Orders SET OrderN= '1587' WHERE N=1;...
+9.SELECT * FROM Orders;
+10.SELECT FirstName
+FROM Clients
+INNER JOIN Orders
+ON Clients.ID = Orders.ID;
+11.SELECT LastName
+FROM Clients
+LEFT JOIN Orders
+ON Clients.ID = Orders.ID;
+WHERE Clients.ID=Orders.ID;
+12.SELECT Orders.OrderN,Clients.LastName, Clients.FirstName
+FROM Clients
+RIGHT JOIN Clients
+ON Orders.ID = Clients.ID;
+13.SELECT Clients.LastName, Orders.ID
+FROM Clients
+CROSS JOIN Orders
+WHERE Clients.ID=Orders.ID;
+14.SELECT A.FirstName AS FirstName, B.LastName AS LastName, A.ID
+FROM Clients A, Clients B 
+WHERE A.ID <> B.ID;
+
+
+
+
+
+
+
+	
